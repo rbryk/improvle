@@ -1,0 +1,17 @@
+<div class="leftbar">
+    <div class="header">
+        <div class="header-row">
+            <mat-icon class="close-button" (click)="closeMenu()">close</mat-icon>
+            <mat-icon class="no-icon">close</mat-icon>
+        </div>
+    </div>
+    <mat-card class="menu-item">
+        <a routerLink="game" (click)="closeMenu()">Game</a>
+    </mat-card>
+    <mat-card class="menu-item">
+        <a routerLink="help" (click)="closeMenu()">Rules</a>
+    </mat-card>
+    <mat-card class="menu-item">
+        <a routerLink="info" (click)="closeMenu()">Info</a>
+    </mat-card>
+</div>

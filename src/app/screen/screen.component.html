@@ -1,0 +1,7 @@
+<div id="screen">
+    <app-leftbar *ngIf="leftbarShown" (menuClosed)='onMenuClosed($event)'></app-leftbar>
+    <app-gamearea *ngIf="!leftbarShown" (menuClicked)='onMenuClicked($event)'></app-gamearea>
+    <app-under-construction></app-under-construction>
+</div>
+
+

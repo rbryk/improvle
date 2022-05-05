@@ -1,0 +1,12 @@
+.uc-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0.7);
+}
+
+@media only screen and (max-width: 600px) {
+    .uc-box {
+        transform: translate(-50%,-50%) scale(0.3);
+    }
+}
