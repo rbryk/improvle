@@ -15,6 +15,9 @@ import {MatCardModule} from "@angular/material/card";
 import { HelpComponent } from './screen/gamearea/help/help.component';
 import { InfoComponent } from './screen/gamearea/info/info.component';
 import { GameComponent } from './screen/gamearea/game/game.component';
+import { GameBoardComponent } from './screen/gamearea/game/game-board/game-board.component';
+import { GameKeyboardComponent } from './screen/gamearea/game/game-keyboard/game-keyboard.component';
+import { GameStatusBarComponent } from './screen/gamearea/game/game-status-bar/game-status-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { GameComponent } from './screen/gamearea/game/game.component';
     UnderConstructionComponent,
     HelpComponent,
     InfoComponent,
-    GameComponent
+    GameComponent,
+    GameBoardComponent,
+    GameKeyboardComponent,
+    GameStatusBarComponent
   ],
   imports: [
     BrowserModule,
