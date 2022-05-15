@@ -1,0 +1,19 @@
+.input-tile {
+  width: calc(((var(--vh, 1vh) * 100) - 480px) / 7);
+  height: calc(((var(--vh, 1vh) * 100) - 480px) / 7);
+  border: var(--color-text) solid 3px;
+
+  img {
+    display:block;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.input-tile-current {
+  background-image: url('/assets/question-mark.png');
+  background-size: cover;
+}
+
+

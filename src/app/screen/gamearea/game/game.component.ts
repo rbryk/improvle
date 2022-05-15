@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GameService} from "./shared/game.service";
 
 @Component({
   selector: 'app-game',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  constructor(public game: GameService) { }
 
   ngOnInit(): void {
+  }
+
+  onProfileChosen($event: number | null) {
+    if ($event !== null) {
+      this.game.addArtistToGuess($event);
+    }
   }
 
 }

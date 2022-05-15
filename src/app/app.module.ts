@@ -21,6 +21,12 @@ import { GameStatusBarComponent } from './screen/gamearea/game/game-status-bar/g
 import { KeyboardTileComponent } from './screen/gamearea/game/game-keyboard/keyboard-tile/keyboard-tile.component';
 import { KeyboardSelectionComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/keyboard-selection.component';
 import { StarComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/star/star.component';
+import { EmptyRowComponent } from './screen/gamearea/game/game-board/next-lines/empty-row/empty-row.component';
+import { EmptyTileComponent } from './screen/gamearea/game/game-board/next-lines/empty-tile/empty-tile.component';
+import { RowComponent } from './screen/gamearea/game/game-board/previous-lines/row/row.component';
+import { TileComponent } from './screen/gamearea/game/game-board/previous-lines/tile/tile.component';
+import { InputTileComponent } from './screen/gamearea/game/game-board/current-line/input-tile/input-tile.component';
+import { InputRowComponent } from './screen/gamearea/game/game-board/current-line/input-row/input-row.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,13 @@ import { StarComponent } from './screen/gamearea/game/game-keyboard/keyboard-sel
     GameStatusBarComponent,
     KeyboardTileComponent,
     KeyboardSelectionComponent,
-    StarComponent
+    StarComponent,
+    EmptyRowComponent,
+    EmptyTileComponent,
+    RowComponent,
+    TileComponent,
+    InputTileComponent,
+    InputRowComponent
   ],
   imports: [
     BrowserModule,

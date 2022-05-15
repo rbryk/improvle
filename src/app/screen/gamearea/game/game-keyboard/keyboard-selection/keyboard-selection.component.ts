@@ -19,7 +19,6 @@ export class KeyboardSelectionComponent implements OnInit {
   constructor(public game: GameService) { }
 
   ngOnInit(): void {
-    //this.artist = this.game.getArtistForKey(this.key)
   }
 
   ngOnChanges(): void {

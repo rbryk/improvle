@@ -1,0 +1,5 @@
+<div class="input-row">
+    <app-input-tile *ngFor='let artist of game.currentGuess; index as num' [artist]='artist'
+                    [number]="num">
+    </app-input-tile>
+</div>

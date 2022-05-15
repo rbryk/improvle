@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-game-keyboard',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class GameKeyboardComponent implements OnInit {
 
   public selected: number|null = null;
+
+  @Output() profileChosen: EventEmitter<number | null> =
+      new EventEmitter<number | null>();
 
   constructor() { }
 
@@ -20,5 +23,6 @@ export class GameKeyboardComponent implements OnInit {
 
   onProfileChosen($event: number | null) {
     this.selected = null;
+    this.profileChosen.emit($event);
   }
 }
