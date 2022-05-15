@@ -11,7 +11,7 @@ export class GameService {
 
   public getArtistForKey(key: number)
   {
-    return this.artistService.get((key + 1) % 2);
+    return this.artistService.get((key + 1));
   }
 
   public getMatchTypeForKey(key: number): MatchType

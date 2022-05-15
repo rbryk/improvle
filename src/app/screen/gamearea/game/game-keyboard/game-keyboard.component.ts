@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameKeyboardComponent implements OnInit {
 
+  public selected: number|null = null;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onKeyClicked($event: number) {
+    this.selected = $event;
+  }
+
+  onProfileChosen($event: number | null) {
+    this.selected = null;
+  }
 }

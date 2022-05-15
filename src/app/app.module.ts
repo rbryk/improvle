@@ -19,6 +19,8 @@ import { GameBoardComponent } from './screen/gamearea/game/game-board/game-board
 import { GameKeyboardComponent } from './screen/gamearea/game/game-keyboard/game-keyboard.component';
 import { GameStatusBarComponent } from './screen/gamearea/game/game-status-bar/game-status-bar.component';
 import { KeyboardTileComponent } from './screen/gamearea/game/game-keyboard/keyboard-tile/keyboard-tile.component';
+import { KeyboardSelectionComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/keyboard-selection.component';
+import { StarComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/star/star.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { KeyboardTileComponent } from './screen/gamearea/game/game-keyboard/keyb
     GameBoardComponent,
     GameKeyboardComponent,
     GameStatusBarComponent,
-    KeyboardTileComponent
+    KeyboardTileComponent,
+    KeyboardSelectionComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

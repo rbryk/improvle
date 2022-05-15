@@ -1,16 +1,18 @@
 <div class="game-keyboard">
     <div class="keyboard-row">
-        <app-keyboard-tile *ngFor="let number of [1,2,3,4,5,6]" [key]=number></app-keyboard-tile>
+        <app-keyboard-tile *ngFor="let number of [1,2,3,4,5,6]" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
     </div>
     <div class="keyboard-row">
-        <app-keyboard-tile *ngFor="let number of [7,8,9,10,11]" [key]=number></app-keyboard-tile>
+        <app-keyboard-tile *ngFor="let number of [7,8,9,10,11]" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
     </div>
     <div class="keyboard-row">
-        <app-keyboard-tile *ngFor="let number of [12,13,14,15,16,17]" [key]=number></app-keyboard-tile>
+        <app-keyboard-tile *ngFor="let number of [12,13,14,15,16,17]" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
     </div>
     <div class="keyboard-row">
         <div class="keyboard-tile function-key key-check">CHECK</div>
-        <app-keyboard-tile *ngFor="let number of [18,19,20]" [key]=number></app-keyboard-tile>
+        <app-keyboard-tile *ngFor="let number of [18,19,20]" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
         <div class="keyboard-tile function-key key-back"><mat-icon>backspace</mat-icon></div>
     </div>
+
+    <app-keyboard-selection *ngIf="selected" [key]=selected (profileChosen)='onProfileChosen($event)'></app-keyboard-selection>
 </div>

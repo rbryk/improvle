@@ -1,37 +1,32 @@
 .keyboard-tile {
   width: 88px;
   height: 88px;
-  //border-radius: 6px;
-  //background-image: url('/assets/faces.jpg');
-  //border: var(--color-text) solid 1px;
 
   .image-holder {
     position: relative;
   }
 
-  .image-holder:before {
-    position: absolute;
-    content: '';
-    height: 88px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    top: 0;
+  .image-holder-match {
+    background: var(--color-match);
   }
 
-  .image-holder-match:before {
-    background: rgba(0, 255, 0, 0.5);
+  .image-holder-partial {
+    background: var(--color-partial);
   }
 
-  .image-holder-partial:before {
-    background: rgba(255, 255, 0, 0.6);
+  .image-holder-miss {
+    background: var(--color-miss);
+    opacity: 0.7;
+    filter: grayscale(100%);
+    border: none;
   }
 
-  .image-holder-miss:before {
-    background: rgba(0, 0, 0, 0.7);
+  .image-holder-none {
+    background: var(--color-none);
   }
 
   img {
+    display:block;
     width: 88px;
     height: 88px;
   }

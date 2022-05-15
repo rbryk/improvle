@@ -1,0 +1,61 @@
+<div class="selection-box">
+    <div class="person-area">
+        <div class="inner-box">
+            <div class="box left-box">
+                <img src="/assets/artists/{{artist?.image}}.png">
+            </div>
+            <div class="box right-box">
+                <div class="data-block">
+                    <div class="info-block">
+                        <div class="person-block">
+                            <div class="person-function">Name:</div>
+                            <div class="person-data">{{artist?.name}}</div>
+                        </div>
+                        <div class="person-block">
+                            <div class="person-function">Sex:</div>
+                            <div class="person-data">{{artist?.sex}}</div>
+                        </div>
+                        <div class="person-block">
+                            <div class="person-function">Country:</div>
+                            <div class="person-data">{{artist?.country}}</div>
+                        </div>
+                        <div class="person-block">
+                            <div class="person-function">Groups:</div>
+                            <div class="person-data">{{artist?.groups?.concat()}}</div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                    <div class="skills-block">
+                        <div class="person-block">
+                            <div class="person-function">Energy:</div>
+                            <div class="person-data">
+                                <app-star [rating]='4'></app-star>
+                            </div>
+                        </div>
+                        <div class="person-block">
+                            <div class="person-function">Agility:</div>
+                            <div class="person-data">
+                                <app-star [rating]='3'></app-star>
+                            </div>
+                        </div>
+                        <div class="person-block">
+                            <div class="person-function">Musican:</div>
+                            <div class="person-data">
+                                <app-star [rating]='5'></app-star>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-area">
+            <div class="selection-button selection-button-select" (click)="onProfileSelected()">
+                Yes!
+            </div>
+            <div class="selection-button selection-button-cancel" (click)="onProfileCancel()">
+                Nah
+            </div>
+        </div>
+    </div>
+</div>
