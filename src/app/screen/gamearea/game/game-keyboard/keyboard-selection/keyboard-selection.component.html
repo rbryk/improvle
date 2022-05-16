@@ -8,22 +8,20 @@
                 <div class="data-block">
                     <div class="info-block">
                         <div class="person-block">
-                            <div class="person-function">Name:</div>
-                            <div class="person-data">{{artist?.name}}</div>
+                            <div class="person-data person-data-name">
+                                {{artist?.name}}
+                                <img class="flag" src="/assets/flags/4x3/{{artist?.country}}.svg"
+                                     alt="{{artist?.country | uppercase}}">
+                            </div>
                         </div>
+                    </div>
+                    <div class="info-block">
                         <div class="person-block">
-                            <div class="person-function">Sex:</div>
-                            <div class="person-data">{{artist?.sex}}</div>
-                        </div>
-                        <div class="person-block">
-                            <div class="person-function">Country:</div>
-                            <div class="person-data">{{artist?.country}}</div>
-                        </div>
-                        <div class="person-block">
-                            <div class="person-function">Groups:</div>
-                            <div class="person-data">{{artist?.groups?.concat()}}</div>
-                        </div>
-                        <div>
+                            <div class="person-data">
+                                <ul>
+                                    <li *ngFor="let groupName of artist?.groups">{{groupName}}</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="skills-block">

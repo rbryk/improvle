@@ -10,246 +10,246 @@ export class ArtistService {
         {
             name: 'Adam Lipski',
             sex: 'M',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Lipny Barszcz'],
             image: 'adam_1'
         },
         {
             name: 'Ala Dobrowolna',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'Wymywammy', 'Ohana'],
             image: 'ala_1'
         },
         {
             name: 'Bartek Cicharski',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Pro Forma'],
             image: 'bartek_1'
         },
         {
             name: 'Bebe Różalska',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'SIN', 'Szafofe'],
             image: 'bebe_1'
         },
         {
             name: 'Dobrosława Bela',
             sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Antymateria'],
             image: 'bela_1'
         },
         {
             name: 'Cédric Marschal',
             sex: 'M',
-            country: 'FR',
-            groups: ['Cie La Carpe Haute'],
+            country: 'fr',
+            groups: ['Anananas&Pampamplemousse', 'Allnighters'],
             image: 'cedric_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Kasia Chmara',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'SIN', 'Szafofe'],
             image: 'chmara_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Dan Seyfried',
+            sex: 'M',
+            country: 'fr',
+            groups: ['Anananas&Pampamplemousse', 'Allnighters', 'Ohana'],
             image: 'dan_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Emilia Szydłowska',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Cytrynowy Sorbet', 'Pro Forma'],
             image: 'emi_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Gael Doorneweerd-Perry',
+            sex: 'M',
+            country: 'fr',
+            groups: ['Anananas&Pampamplemousse', 'Allnighters', 'SIN'],
             image: 'gael_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Igor Wawrzeńczyk',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Cytrynowy Sorbet'],
             image: 'igor_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Inbal Lori',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'is',
+            groups: ['Lorilees'],
             image: 'inbal_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Jacek Mikulski',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Impy', 'Syndykat Beki'],
             image: 'jacek_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Jerzyk Wierzbicki',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Impy', 'Syndykat Beki'],
             image: 'jerzyk_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Juliusz Roszczyk',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Impy', 'Syndykat Beki'],
             image: 'juliusz_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Rafał Kaczmarski',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Cytrynowy Sorbet', 'Allnighters'],
             image: 'kaczmar_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Kalina Kubica',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Cytrynowy Sorbet'],
             image: 'kalina_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Karo Pańczyk',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Seven Women of Different Ages', 'Syndykat Beki', 'Niplodram'],
             image: 'karo_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Kasia Rytter',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Cytrynowy Sorbet'],
             image: 'kasia_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Kiki Hohnen',
             sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            country: 'nl',
+            groups: ['Scandalous Women of History'],
             image: 'kiki_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Paweł Kukla',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Scandalous Women of History'],
             image: 'kukl_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Laura Doorneweerd-Perry',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'nl',
+            groups: ['Scandalous Women of History', 'Ohana'],
             image: 'laura_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Lee White',
+            sex: 'M',
+            country: 'ca',
+            groups: ['Lorilees'],
             image: 'lee_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Łukasz Orłowski',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Gambit'],
             image: 'luka_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Marcin Walentynowicz',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Gambit', 'Syndykat Beki'],
             image: 'marjan_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Mateusz Barczyk',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Lipny Barszcz'],
             image: 'mateusz_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Monica Gaga',
             sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            country: 'uk',
+            groups: [],
             image: 'monica_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Paula Walendowska',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Gambit'],
             image: 'paula_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Gosia Różalska',
             sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            country: 'pl',
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'Ohana'],
             image: 'roza_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Sacha Hoedemaker',
+            sex: 'M',
+            country: 'nl',
+            groups: [],
             image: 'sacha_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Seba Zawadzki',
+            sex: 'M',
+            country: 'pl',
+            groups: [],
             image: 'seba_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            name: 'Stephen Davidson',
+            sex: 'M',
+            country: 'uk',
+            groups: ['SIN'],
             image: 'stephen_1'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Tadek Jaśkiewicz',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Pro Forma'],
             image: 'tadek_1'
         },
         {
-            name: 'Aaa Bbb',
+            name: 'Tanine Dunais',
             sex: 'F',
-            country: 'OUT',
-            groups: ['Group 1'], 
+            country: 'ir',
+            groups: ['Scandalous Women of History'],
             image: 'tanine'
         },
         {
-            name: 'Aaa Bbb',
-            sex: 'F',
-            country: 'PL',
-            groups: ['Group 1'], 
+            name: 'Wiktor Walentynowicz',
+            sex: 'M',
+            country: 'pl',
+            groups: ['Gambit', 'Syndykat Beki'],
             image: 'wiktor_1'
         },
     ];

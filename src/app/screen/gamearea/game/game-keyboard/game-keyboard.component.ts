@@ -18,7 +18,9 @@ export class GameKeyboardComponent implements OnInit {
   }
 
   onKeyClicked($event: number) {
-    this.selected = $event;
+    if (!this.selected) {
+      this.selected = $event;
+    }
   }
 
   onProfileChosen($event: number | null) {
