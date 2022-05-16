@@ -1,12 +1,11 @@
 .selection-box {
   background-color: var(--color-violet-dark);
   border: var(--color-text) solid 1px;
-  width: 300px;
   position: absolute;
   left: 50%;
-  bottom: 25px;
-  width: 524px;
-  height: 340px;
+  bottom: 40px;
+  width: 500px;
+  height: 310px;
   transform: translate(-50%);
   box-shadow: 0 0 20px 10px black;
 
@@ -37,20 +36,20 @@
           display: flex;
           flex-direction: column;
           justify-content: left;
-          gap: 20px;
+          gap: 13px;
 
           .info-block {
             display: flex;
             flex-direction: column;
             justify-content: left;
-            gap: 8px;
+            gap: 5px;
           }
 
           .skills-block {
             display: flex;
             flex-direction: column;
             justify-content: left;
-            gap: 8px;
+            gap: 5px;
           }
 
           .person-block {
@@ -83,12 +82,12 @@
       img {
         background-color: var(--color-none);
         border: var(--color-text) solid 1px;
-        width: 205px
+        width: 180px
       }
     }
   }
   .button-area {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -96,9 +95,8 @@
 }
 
 .selection-button {
-  //margin: 10px;
   width: 205px;
-  height: 70px;
+  height: 60px;
   text-align: center;
   font-size: 28px;
   display: flex;
