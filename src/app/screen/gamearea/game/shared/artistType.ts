@@ -3,5 +3,6 @@ export type artistType = {
     sex: string,
     country: string,
     image: string,
-    groups: string[]
+    groups: string[],
+    musican: boolean
 }

@@ -1,5 +1,4 @@
 .game-keyboard {
-  //background-color: orange;
   padding: 0px 15px;
   height: 380px;
   display: flex;
@@ -17,15 +16,12 @@
     .keyboard-tile {
       width: 88px;
       height: 88px;
-      //border-radius: 6px;
       background-image: url('/assets/faces.jpg');
-      //border: var(--color-text) solid 3px;
     }
 
     .function-key {
       width: 134px;
       background-image: none;
-      //border-radius: 6px;
       border: var(--color-text) solid 1px;
       background-color: var(--color-violet-dark);
       font-weight: 500;
@@ -38,7 +34,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      //padding-bottom: 5px;
     }
 
     .key-back {

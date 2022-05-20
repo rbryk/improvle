@@ -13,6 +13,7 @@ export class ArtistState {
             country: '',
             image: '',
             groups: [],
+            musican: false
         }
     }
 }

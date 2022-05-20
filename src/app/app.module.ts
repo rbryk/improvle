@@ -19,14 +19,15 @@ import { GameBoardComponent } from './screen/gamearea/game/game-board/game-board
 import { GameKeyboardComponent } from './screen/gamearea/game/game-keyboard/game-keyboard.component';
 import { GameStatusBarComponent } from './screen/gamearea/game/game-status-bar/game-status-bar.component';
 import { KeyboardTileComponent } from './screen/gamearea/game/game-keyboard/keyboard-tile/keyboard-tile.component';
-import { KeyboardSelectionComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/keyboard-selection.component';
-import { StarComponent } from './screen/gamearea/game/game-keyboard/keyboard-selection/star/star.component';
+import { KeyboardSelectionComponent } from './screen/gamearea/game/keyboard-selection/keyboard-selection.component';
+import { StarComponent } from './screen/gamearea/game/keyboard-selection/star/star.component';
 import { EmptyRowComponent } from './screen/gamearea/game/game-board/next-lines/empty-row/empty-row.component';
 import { EmptyTileComponent } from './screen/gamearea/game/game-board/next-lines/empty-tile/empty-tile.component';
 import { RowComponent } from './screen/gamearea/game/game-board/previous-lines/row/row.component';
 import { TileComponent } from './screen/gamearea/game/game-board/previous-lines/tile/tile.component';
 import { InputTileComponent } from './screen/gamearea/game/game-board/current-line/input-tile/input-tile.component';
 import { InputRowComponent } from './screen/gamearea/game/game-board/current-line/input-row/input-row.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { InputRowComponent } from './screen/gamearea/game/game-board/current-lin
     BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
-
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

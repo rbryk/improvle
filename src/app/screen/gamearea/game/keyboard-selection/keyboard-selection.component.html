@@ -3,6 +3,8 @@
         <div class="inner-box">
             <div class="box left-box">
                 <img src="/assets/artists/{{artist?.image}}.png">
+                <img *ngIf="false" class="flag" src="/assets/flags/4x3/{{artist?.country}}.svg"
+                     alt="{{artist?.country | uppercase}}">
             </div>
             <div class="box right-box">
                 <div class="data-block">
@@ -17,14 +19,14 @@
                     </div>
                     <div class="info-block">
                         <div class="person-block">
-                            <div class="person-data">
+                            <div class="person-data person-data-groups">
                                 <ul>
                                     <li *ngFor="let groupName of artist?.groups">{{groupName}}</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="skills-block">
+                    <div *ngIf="false" class="skills-block">
                         <div class="person-block">
                             <div class="person-function">Energy:</div>
                             <div class="person-data">
@@ -47,13 +49,6 @@
                 </div>
             </div>
         </div>
-        <div class="button-area">
-            <div class="selection-button selection-button-select" (click)="onProfileSelected()">
-                Yes!
-            </div>
-            <div class="selection-button selection-button-cancel" (click)="onProfileCancel()">
-                Back
-            </div>
-        </div>
     </div>
 </div>
+

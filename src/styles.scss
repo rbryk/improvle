@@ -27,3 +27,8 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
+.mat-snack-bar-container {
+  min-width: calc(var(--game-width) - 50px)!important;
+  padding: 2px!important;
+  margin:5px!important;
+}
