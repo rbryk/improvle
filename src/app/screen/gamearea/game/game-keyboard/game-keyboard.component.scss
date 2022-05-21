@@ -29,6 +29,14 @@
       opacity: 0.8;
     }
 
+    .key-check-active {
+      background-color: var(--color-match);
+    }
+
+    .key-check-inactive {
+
+    }
+
     .key-check {
       font-size: 24px;
       display: flex;

@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: center;
   flex-direction: column;
-  height: 60px;
+  height: 90px;
 
   .header-row {
     display: flex;
@@ -13,8 +13,8 @@
     justify-content: space-between;
 
     .logo {
-      width: 26px;
-      height: 26px;
+      width: 36px;
+      height: 36px;
       filter:brightness(0) invert(1);
     }
 
@@ -36,15 +36,15 @@
     .center-text {
       .title {
         text-transform: uppercase;
-        font-size: 32px;
+        font-size: 48px;
         font-weight: 700;
-        margin-bottom: 3px;
-        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-top: 10px;
         color: var(--color-text);
       }
 
       .subtitle {
-        font-size: 14px;
+        font-size: 18px;
         color: var(--color-text);
       }
     }

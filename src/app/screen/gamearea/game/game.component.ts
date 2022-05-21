@@ -3,6 +3,7 @@ import {GameService} from "./shared/game.service";
 import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
 import {KeyboardSelectionComponent} from "./keyboard-selection/keyboard-selection.component";
 import {MAT_SNACK_BAR_DATA, MatSnackBar} from '@angular/material/snack-bar';
+import {ArtistService} from "./shared/artist.service";
 
 @Component({
     selector: 'app-game',
@@ -24,14 +25,18 @@ export class GameComponent implements OnInit {
 
     public showEndgamePopup: boolean = false;
 
-    constructor(public game: GameService, private _snackBar: MatSnackBar) {
+    constructor(
+        public game: GameService,
+        private artistService: ArtistService,
+        private _snackBar: MatSnackBar
+    ) {
     }
 
     ngOnInit(): void {
     }
 
     onCheckClicked($event: boolean) {
-        if (!this.game.isOver() && this.game.isGuessFilled()) {
+        if (this.game.isGuessFilled()) {
             this.game.applyCurrentGuess();
             if (this.game.isOver()) {
                 this.displayEndGame();
@@ -47,12 +52,16 @@ export class GameComponent implements OnInit {
 
     onProfileChosen($event: number | null) {
         if ($event !== null) {
-            this._snackBar.openFromComponent(KeyboardSelectionComponent, {
-                data: $event,
-                duration: 1500,
-                verticalPosition: "top"
-            });
-            this.game.addArtistToGuess($event);
+            if (!this.game.isGuessFull()) {
+                if (!this.game.isArtistAlreadyUsed(this.artistService.get($event))) {
+                    this._snackBar.openFromComponent(KeyboardSelectionComponent, {
+                        data: $event,
+                        duration: 1500,
+                        verticalPosition: "top"
+                    });
+                    this.game.addArtistToGuess($event);
+                }
+            }
         }
     }
 

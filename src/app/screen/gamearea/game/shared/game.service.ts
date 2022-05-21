@@ -48,28 +48,37 @@ export class GameService {
   }
 
   public youWin(): boolean {
-    return JSON.stringify(this.lastGuessed()) === JSON.stringify(this.solution);// && this.currentGuessNumber <= this.MAX_GUESSES
+    let s1 = JSON.stringify(this.lastGuessed());
+    let s2 = JSON.stringify(this.solution);
+    return s1 === s2;
   }
 
   public youLose(): boolean {
-    return this.guesses.length >= this.MAX_GUESSES
+    return this.guesses.length >= this.MAX_GUESSES && !this.youWin()
   }
 
   private lastGuessed(): artistType[] | undefined{
     if (this.currentGuessNumber == 1) {
       return undefined;
     }
-    return this.guesses[this.currentGuessNumber - 2].map((value: ArtistState) => {
+    return this.guesses[this.guesses.length - 1].map((value: ArtistState) => {
       return value.artist;
     });
   }
 
+  public isGuessFull() {
+    return this.currentInputArtist === this.MAX_ARTISTS;
+  }
 
   public addArtistToGuess(artist: number) {
     if (this.currentInputArtist < this.MAX_ARTISTS) {
       this.currentGuess[this.currentInputArtist] = this.artistService.get(artist);
       this.currentInputArtist++;
     }
+  }
+
+  public isArtistAlreadyUsed(artist: artistType): boolean {
+    return this.currentGuess.includes(artist);
   }
 
   public removeArtistFromGuess(): void {

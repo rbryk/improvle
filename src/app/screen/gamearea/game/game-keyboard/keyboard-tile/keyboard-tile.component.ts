@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {GameService} from "../../shared/game.service";
+import {artistType} from "../../shared/artistType";
+import {ArtistState} from "../../shared/artist-state";
 
 @Component({
     selector: 'app-keyboard-tile',
@@ -13,13 +15,13 @@ export class KeyboardTileComponent implements OnInit {
     @Output() keyClicked: EventEmitter<number> =
         new EventEmitter<number>();
 
-    public image: string = '';
+    public artist: artistType = ArtistState.dummy();
 
     constructor(public game: GameService) {
     }
 
     ngOnInit(): void {
-        this.image = this.game.getArtistForKey(this.key).image;
+        this.artist = this.game.getArtistForKey(this.key);
     }
 
     onClick(): void {

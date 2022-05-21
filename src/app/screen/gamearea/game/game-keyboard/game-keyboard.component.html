@@ -9,7 +9,7 @@
         <app-keyboard-tile *ngFor="let number of getRow(3)" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
     </div>
     <div class="keyboard-row">
-        <div class="keyboard-tile function-key key-check" (click)='onCheckClicked(true)'>CHECK</div>
+        <div class="keyboard-tile function-key key-check key-check-{{game.isGuessFull() ? 'active' : 'inactive'}}" (click)='onCheckClicked(true)'>CHECK</div>
         <app-keyboard-tile *ngFor="let number of getRow(4)" [key]=number (keyClicked)='onKeyClicked($event)'></app-keyboard-tile>
         <div class="keyboard-tile function-key key-back" (click)='onBackspaceClicked(true)'><mat-icon>backspace</mat-icon></div>
     </div>

@@ -1,5 +1,5 @@
 .game-board {
-  height: calc(((var(--vh, 1vh) * 100) - 480px));
+  height: calc(((var(--vh, 1vh) * 100) - 90px - 380px - 40px));
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -1,5 +1,11 @@
 <div class="status-bar">
-    <div class="text">
+    <div *ngIf="!game.isOver()" class="text">
         Attempt: {{game.currentGuessNumber}}
+    </div>
+    <div *ngIf="game.youWin()" class="text">
+        You won in {{game.currentGuessNumber}} attempts!
+    </div>
+    <div *ngIf="game.youLose()" class="text">
+        You loose after 6 attempts.
     </div>
 </div>

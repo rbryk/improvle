@@ -1,4 +1,9 @@
-<div class="input-tile">
+<div class="tile input-tile">
     <div *ngIf="game.currentInputArtist === number" class="input-tile-current"></div>
-    <img *ngIf="number < game.currentInputArtist" src="/assets/artists/{{artist.image}}.png">
+    <img
+            *ngIf="number < game.currentInputArtist"
+            src="/assets/artists/{{artist.image}}.png"
+            title="{{artist.name}} [{{artist.country | uppercase}}]"
+            (click)="onClick()"
+    />
 </div>

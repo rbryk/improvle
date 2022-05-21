@@ -3,7 +3,6 @@
     <div class="board-container-element">
         <app-row *ngFor='let guess of game.guesses' [guess]="guess"></app-row>
         <app-input-row *ngIf="!game.isOver()"></app-input-row>
-        <app-empty-row *ngIf="game.isOverNotInLastMove()"></app-empty-row>
         <app-empty-row *ngFor='let _ of game.emptyLines()'></app-empty-row>
     </div>
 
