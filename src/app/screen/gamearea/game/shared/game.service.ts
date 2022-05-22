@@ -37,6 +37,8 @@ export class GameService {
     this.keyboard = this.solutionService.getKeyboardForSolution(this.solution);
     console.log(this.keyboard);
     console.log(this.solution);
+    // this.currentGuess = [...this.solution];
+    // this.currentInputArtist = this.MAX_ARTISTS;
   }
 
   public isOver() {
@@ -58,12 +60,16 @@ export class GameService {
   }
 
   private lastGuessed(): artistType[] | undefined{
-    if (this.currentGuessNumber == 1) {
+    if (this.guesses.length === 0) {
       return undefined;
     }
     return this.guesses[this.guesses.length - 1].map((value: ArtistState) => {
       return value.artist;
     });
+  }
+
+  public fromCurrentGuess(artist: artistType): boolean {
+    return this.currentGuess.includes(artist);
   }
 
   public isGuessFull() {

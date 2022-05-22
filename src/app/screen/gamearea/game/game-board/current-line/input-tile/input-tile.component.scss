@@ -1,14 +1,10 @@
 .input-tile {
-  //width: calc(((var(--vh, 1vh) * 100) - 480px) / 7);
-  //height: calc(((var(--vh, 1vh) * 100) - 480px) / 7);
-  //border: var(--color-text) solid 3px;
 
   img {
     display:block;
     width: 100%;
     height: 100%;
   }
-
 }
 
 .input-tile-current {
@@ -19,4 +15,6 @@
   background-size: cover;
 }
 
-
+div.empty-tile {
+  border: 3px solid var(--color-selection-border);
+}

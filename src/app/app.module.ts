@@ -28,6 +28,8 @@ import { TileComponent } from './screen/gamearea/game/game-board/previous-lines/
 import { InputTileComponent } from './screen/gamearea/game/game-board/current-line/input-tile/input-tile.component';
 import { InputRowComponent } from './screen/gamearea/game/game-board/current-line/input-row/input-row.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { EndgamePopupComponent } from './screen/gamearea/game/endgame-popup/endgame-popup.component';
+import {ClipboardModule} from "@angular/cdk/clipboard";
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     RowComponent,
     TileComponent,
     InputTileComponent,
-    InputRowComponent
+    InputRowComponent,
+    EndgamePopupComponent,
   ],
   imports: [
     BrowserModule,

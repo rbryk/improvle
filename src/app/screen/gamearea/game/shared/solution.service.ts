@@ -64,16 +64,16 @@ export class SolutionService {
     private validateGroups(artists: artistType[]) {
         let allGroups = artists.map((a) => a.groups).flat();
         const noDups = new Set(allGroups);
-        console.log('all:');
-        console.log(allGroups);
-        console.log('noDups:');
-        console.log(noDups);
+        // console.log('all:');
+        // console.log(allGroups);
+        // console.log('noDups:');
+        // console.log(noDups);
         return allGroups.length === noDups.size;
     }
 
     private validateCountry(artists: artistType[]) {
         let polandArtists = this.getPolandArtists(artists);
-        return polandArtists.length !== artists.length;
+        return [2,3].includes(polandArtists.length);
     }
 
     private getPolandArtists(artists: artistType[]) {
@@ -82,7 +82,8 @@ export class SolutionService {
 
     private validateSex(artists: artistType[]) {
         let maleArtists = artists.filter((a) => a.sex == 'M');
-        return maleArtists.length !== artists.length && maleArtists.length !== 0
+        return [2,3].includes(maleArtists.length);
+        // return maleArtists.length !== artists.length && maleArtists.length !== 0
     }
 
     private validateOneOrNoMusicans(artists: artistType[]) {

@@ -17,6 +17,7 @@
   .image-holder-miss {
     background: var(--color-miss);
     border: none;
+    opacity: 0.3;
 
     img {
       opacity: 0.7;
@@ -32,5 +33,12 @@
     display:block;
     width: 88px;
     height: 88px;
+  }
+
+  img.artist-selected {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 5px solid var(--color-selection-border);
   }
 }

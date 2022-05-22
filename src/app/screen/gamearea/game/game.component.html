@@ -1,4 +1,5 @@
 <div class="game-box">
+    <app-endgame-popup *ngIf="game.isOver() && showEndgamePopup" (xClicked)='onXClicked()'></app-endgame-popup>
     <app-game-status-bar></app-game-status-bar>
     <app-game-board></app-game-board>
     <app-game-keyboard

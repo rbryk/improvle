@@ -1,6 +1,11 @@
 <div class="keyboard-tile" (click)="onClick()">
     <div  class="image-holder image-holder-{{game.getMatchTypeForKey(key)}}">
-        <img src="/assets/artists/{{artist.image}}.png" alt="{{artist.name}}" title="{{artist.name}} [{{artist.country | uppercase}}]">
+        <img
+                src="/assets/artists/{{artist.image}}.png"
+                alt="{{artist.name}}"
+                title="{{artist.name}} [{{artist.country | uppercase}}]"
+                class="{{game.fromCurrentGuess(artist) ? 'artist-selected' : ''}}"
+        >
     </div>
 </div>
 

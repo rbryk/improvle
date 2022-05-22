@@ -71,5 +71,7 @@ export class GameComponent implements OnInit {
         }, 1000);
     }
 
-
+    onXClicked() {
+        this.showEndgamePopup = false;
+    }
 }

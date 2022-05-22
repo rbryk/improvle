@@ -19,7 +19,7 @@ export class ArtistService {
             name: 'Ala Dobrowolna',
             sex: 'F',
             country: 'pl',
-            groups: ['Seven Women of Different Ages', 'Wymywammy'],
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'Wymywammy', 'Ohana'],
             image: 'ala_1',
             musican: false
         },
@@ -35,7 +35,7 @@ export class ArtistService {
             name: 'Bebe Różalska',
             sex: 'F',
             country: 'pl',
-            groups: ['Seven Women of Different Ages', 'Szafofe'],
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'SIN', 'Szafofe'],
             image: 'bebe_1',
             musican: false
         },
@@ -51,7 +51,7 @@ export class ArtistService {
             name: 'Cédric Marschal',
             sex: 'M',
             country: 'fr',
-            groups: ['Anananas&Pampamplemousse'],
+            groups: ['Anananas&Pampamplemousse', 'Allnighters'],
             image: 'cedric_1',
             musican: false
         },
@@ -59,7 +59,7 @@ export class ArtistService {
             name: 'Kasia Chmara',
             sex: 'F',
             country: 'pl',
-            groups: ['Seven Women of Different Ages', 'Wymywammy'],
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'Wymywammy', 'Ohana'],
             image: 'chmara_1',
             musican: false
         },
@@ -67,7 +67,7 @@ export class ArtistService {
             name: 'Dan Seyfried',
             sex: 'M',
             country: 'fr',
-            groups: ['Anananas&Pampamplemousse'],
+            groups: ['Anananas&Pampamplemousse', 'Allnighters', 'Ohana'],
             image: 'dan_1',
             musican: false
         },
@@ -83,7 +83,7 @@ export class ArtistService {
             name: 'Gael Doorneweerd-Perry',
             sex: 'M',
             country: 'fr',
-            groups: ['Anananas&Pampamplemousse'],
+            groups: ['Anananas&Pampamplemousse', 'Allnighters', 'SIN'],
             image: 'gael_1',
             musican: false
         },
@@ -131,7 +131,7 @@ export class ArtistService {
             name: 'Rafał Kaczmarski',
             sex: 'M',
             country: 'pl',
-            groups: ['Cytrynowy Sorbet'],
+            groups: ['Cytrynowy Sorbet', 'Allnighters'],
             image: 'kaczmar_1',
             musican: false
         },
@@ -179,7 +179,7 @@ export class ArtistService {
             name: 'Laura Doorneweerd-Perry',
             sex: 'F',
             country: 'nl',
-            groups: ['Scandalous Women of History'],
+            groups: ['Scandalous Women of History', 'Ohana'],
             image: 'laura_1',
             musican: false
         },
@@ -235,7 +235,7 @@ export class ArtistService {
             name: 'Gosia Różalska',
             sex: 'F',
             country: 'pl',
-            groups: ['Seven Women of Different Ages'],
+            groups: ['Seven Women of Different Ages', 'Allnighters', 'Ohana'],
             image: 'roza_1',
             musican: false
         },
@@ -259,7 +259,7 @@ export class ArtistService {
             name: 'Stephen Davidson',
             sex: 'M',
             country: 'gb',
-            groups: [],
+            groups: ['SIN'],
             image: 'stephen_1',
             musican: false
         },

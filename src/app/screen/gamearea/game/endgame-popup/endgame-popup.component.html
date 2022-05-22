@@ -1,0 +1,45 @@
+<div @endgamePopupAnimationTrigger id="popupOverlayElement">
+    <div class="popup-container">
+        <div class="popup" *ngIf="game.youWin()">
+            <div class="header" (click)="closeHelp()">
+                <mat-icon>highlight_off</mat-icon>
+            </div>
+            <div class="text">
+                That would be a great show!
+            </div>
+            <app-row [guess]="this.solution"></app-row>
+            <div class="title">
+                Congratulations!
+            </div>
+            <div class="text attempts">
+                You solved today's riddle in {{game.currentGuessNumber}} attempt{{game.currentGuessNumber > 1 ? 's' : ''}}.
+            </div>
+            <div class="text">
+                Come back tomorrow to face another riddle.
+            </div>
+            <button class="share-button" (click)="onClick()">
+                Share
+            </button>
+            <div class="footer">Authors: Rafał Bryk, Piotr Pawłowski</div>
+        </div>
+        <div class="popup" *ngIf="!game.youWin()">
+            <div class="header" (click)="closeHelp()">
+                <mat-icon>highlight_off</mat-icon>
+            </div>
+            <div class="title">
+                Sorry ...
+            </div>
+            <div class="text">
+                Today's solution:
+            </div>
+            <app-row [guess]="this.solution"></app-row>
+            <div class="text">
+                Come back tomorrow to face another riddle.
+            </div>
+            <button class="share-button" (click)="onClick()">
+                Share
+            </button>
+            <div class="footer">Authors: Rafał Bryk, Piotr Pawłowski</div>
+        </div>
+    </div>
+</div>
