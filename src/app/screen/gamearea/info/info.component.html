@@ -1,11 +1,17 @@
 <div class="info-box">
-    <h2>JO - International Improv Festival</h2>
+<!--    <h2>JO - International Improv Festival</h2>-->
 
+<!--    <ul>-->
+<!--        <li>Join: (TODO: link and icons)</li>-->
+<!--        <li>Buy tickets: (TODO: link and icons)</li>-->
+<!--        <li>More info: (TODO: link and icons)</li>-->
+<!--        <li>Cute Frog: (TODO: link and icons)</li>-->
+<!--        <li>About Us: (TODO: link and icons)</li>-->
+<!--    </ul>-->
+
+    <div class="generate-button" (click)="onClick()">GENERATE</div>
+    <div>Artists distribution</div>
     <ul>
-        <li>Join: (TODO: link and icons)</li>
-        <li>Buy tickets: (TODO: link and icons)</li>
-        <li>More info: (TODO: link and icons)</li>
-        <li>Cute Frog: (TODO: link and icons)</li>
-        <li>About Us: (TODO: link and icons)</li>
+        <li *ngFor="let res of result">{{res}}</li>
     </ul>
 </div>

@@ -36,7 +36,7 @@ export class GameComponent implements OnInit {
     }
 
     onCheckClicked($event: boolean) {
-        if (this.game.isGuessFilled()) {
+        if (this.game.isGuessFilled() && !this.game.isOver()) {
             this.game.applyCurrentGuess();
             if (this.game.isOver()) {
                 this.displayEndGame();
@@ -52,7 +52,7 @@ export class GameComponent implements OnInit {
 
     onProfileChosen($event: number | null) {
         if ($event !== null) {
-            if (!this.game.isGuessFull()) {
+            if (!this.game.isGuessFull() && !this.game.isOver()) {
                 if (!this.game.isArtistAlreadyUsed(this.artistService.get($event))) {
                     this._snackBar.openFromComponent(KeyboardSelectionComponent, {
                         data: $event,

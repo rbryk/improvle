@@ -25,7 +25,7 @@ export class ArtistService {
         },
         {
             name: 'Bartek Cicharski',
-            sex: 'F',
+            sex: 'M',
             country: 'pl',
             groups: ['Pro Forma'],
             image: 'bartek_1',
@@ -243,7 +243,7 @@ export class ArtistService {
             name: 'Sacha Hoedemaker',
             sex: 'M',
             country: 'nl',
-            groups: [],
+            groups: ['(musican)'],
             image: 'sacha_1',
             musican: true
         },
@@ -251,7 +251,7 @@ export class ArtistService {
             name: 'Seba Zawadzki',
             sex: 'M',
             country: 'pl',
-            groups: [],
+            groups: ['(musican)'],
             image: 'seba_1',
             musican: true
         },

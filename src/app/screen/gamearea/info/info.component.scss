@@ -6,6 +6,17 @@
   }
   li {
     font-size: 18px;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
   }
+}
+
+.generate-button {
+  color: white;
+  background-color: forestgreen;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 26px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SolutionService} from "../game/shared/solution.service";
 
 @Component({
   selector: 'app-info',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
+  public result: string[] = [];
+
+  constructor(private solutionsService: SolutionService) { }
 
   ngOnInit(): void {
+  }
+
+  onClick(): void {
+    this.result = this.solutionsService.makeAllSolutions();
   }
 
 }
