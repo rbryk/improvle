@@ -4,5 +4,6 @@ export type artistType = {
     country: string,
     image: string,
     groups: string[],
-    musican: boolean
+    musician: boolean,
+    hidden_groups: string[],
 }

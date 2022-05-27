@@ -4,3 +4,4 @@ export enum MatchType {
     Partial = 'partial',
     Match = 'match'
 }
+

@@ -9,7 +9,8 @@ import {ArtistState} from "./artist-state";
 })
 export class SolutionService {
 
-    private readonly _valids = [0, 6713, 12667, 17634, 22292, 27853, 32073, 35936, 39267, 40845, 43666, 44661, 46782, 47336, 47890, 48444, 48879, 49528, 49908, 50472, 50703, 50896, 51049, 51148, 51173, 51198, 51240, 51269, 51276, 51282, 51282, 51282, 51282, 51282, 51282, 51282];
+    private readonly _valids = [0, 6658, 12564, 17537, 22195, 27929, 32696, 36537, 40401, 42135, 45431, 46486, 49072, 49854, 50636, 51418, 51827, 52430, 52927, 53424, 53626, 53789, 53921, 54010, 54027, 54044, 54073, 54084, 54091, 54097, 54097, 54097, 54097, 54097, 54097, 54097];
+
     private readonly _largePrimeNumber = 3167;
     private readonly _veryLargePrimeNumber = 174387521;
 
@@ -112,7 +113,8 @@ export class SolutionService {
     }
 
     makeAllSolutions(): any {
-        let result: number[] = Array(35).fill(0);;
+        let result: number[] = Array(35).fill(0);
+        ;
         let perms: number[][] = [];
         let a, b, c, d, e: number;
         let valid: number = 0
@@ -151,10 +153,16 @@ export class SolutionService {
         console.log('invalid: ', invalid);
         console.log('all: ', valid + invalid);
         console.log('valids: ', valids);
-        return result.map((v, i) => this.artistService.get(i).name + ' : ' + v);
+        let retVal = result.map((v, i) => this.artistService.get(i).name + ' : ' + v + ' (' + (100 * v / (valid)).toFixed(2) + '%)');
+        retVal.push('---------------------------');
+        retVal.push('Valid: ' + valid + ' / ' + (valid + invalid));
+        return retVal;
     }
 
     public getKeyboardForSolution(solution: artistType[]): number[] {
+        console.log("solution");
+        console.log(solution);
+
         let keyboardSolution: number[] = solution.map((a) => this.artistService.key(a));
 
         let keyboardRest =
@@ -178,8 +186,10 @@ export class SolutionService {
             }
             return prev;
         }, []);
-        // console.log("keyboard");
-        // console.log(keyboard);
+        console.log("keyboardSolution");
+        console.log(keyboardSolution);
+        console.log("keyboard");
+        console.log(keyboard);
         return this.shuffle([...keyboardSolution, ...keyboard]);
     }
 
@@ -211,16 +221,6 @@ export class SolutionService {
         return md5val;
     }
 
-    private getMd5ForFinalShuffle() {
-        const md5 = new Md5();
-        let md5val = md5.appendStr(
-            this.getTodayTimestamp() +
-            'S4589geW6Q3G.@#5qTG' +
-            this._largePrimeNumber.toString() +
-            this._veryLargePrimeNumber.toString()
-        ).end().toString();
-        return md5val;
-    }
     //
     // public getKeyboardForSolutionOld(solution: artistType[]): number[] {
     //     let keyboardSolution: number[] = solution.map((a) => this.artistService.key(a));
@@ -232,6 +232,9 @@ export class SolutionService {
 
     private validate(artists: artistType[]): boolean {
         if (!this.validateGroups(artists)) {
+            return false;
+        }
+        if (!this.validateHiddenGroups(artists)) {
             return false;
         }
         if (!this.validateCountry(artists)) {
@@ -271,6 +274,16 @@ export class SolutionService {
         return allGroups.length === noDups.size;
     }
 
+    private validateHiddenGroups(artists: artistType[]) {
+        let allGroups = artists.map((a) => a.hidden_groups).flat();
+        const noDups = new Set(allGroups);
+        // console.log('all:');
+        // console.log(allGroups);
+        // console.log('noDups:');
+        // console.log(noDups);
+        return allGroups.length === noDups.size;
+    }
+
     private validateCountry(artists: artistType[]) {
         let polandArtists = this.getPolandArtists(artists);
         return [2, 3].includes(polandArtists.length);
@@ -287,7 +300,7 @@ export class SolutionService {
 
     private musicansIndex(artists: artistType[]) {
         return artists.reduce(function (acu, a, i, arr) {
-            return a.musican === true ? i : acu
+            return a.musician === true ? i : acu
         }, -1);
     }
 
@@ -306,7 +319,7 @@ export class SolutionService {
     // }
 
     private makeLegalPermutation(artists: artistType[]): artistType[] {
-        return artists.sort((a, b) => (b.musican) ? -1 : 1);
+        return artists.sort((a, b) => (b.musician) ? -1 : 1);
     }
 
 }

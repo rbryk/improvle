@@ -5,7 +5,44 @@
     font-size: 28px;
   }
   p {
-    font-size: 22px;
+    font-size: 26px;
     padding-bottom: 8px;
+    line-height: 1.2;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  p.tile-example-comment {
+    padding-bottom: 0px;
+  }
+
+  .tile-example {
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    width: 260px;
+    margin-bottom: 30px;
+  }
+
+  .play-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    //a {
+    //  margin: 0 auto;
+    //  cursor: pointer;
+
+    .play-button {
+        margin: 0 auto;
+        cursor: pointer;
+        color: white;
+        background-color: forestgreen;
+        padding: 10px 30px;
+        border-radius: 8px;
+        border: none;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 26px;
+      }
+    //}
   }
 }

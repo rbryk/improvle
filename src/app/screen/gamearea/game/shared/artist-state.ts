@@ -13,7 +13,9 @@ export class ArtistState {
             country: '',
             image: '',
             groups: [],
-            musican: false
+            hidden_groups: [],
+            musician: false
         }
     }
+
 }

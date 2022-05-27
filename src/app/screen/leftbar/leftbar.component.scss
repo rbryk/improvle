@@ -17,5 +17,20 @@
     text-align: center;
     background-color: var(--color-violet-dark);
   }
+}
 
+.link-section {
+  width: 80%;
+  padding: 4% 2%;
+  margin: 2% auto 0 auto;
+  background-color: var(--color-violet-light);
+  border: 2px solid var(--color-text);
+  color: var(--color-link);
+  text-align: center;
+}
+
+a {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
 }

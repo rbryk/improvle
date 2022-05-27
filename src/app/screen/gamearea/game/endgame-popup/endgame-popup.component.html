@@ -17,7 +17,7 @@
             <div class="text">
                 Come back tomorrow to face another riddle.
             </div>
-            <button class="share-button" (click)="onClick()">
+            <button class="share-button" [cdkCopyToClipboard]="result.share(true)" (click)="onClick()">
                 Share
             </button>
             <div class="footer">Authors: Rafał Bryk, Piotr Pawłowski</div>
@@ -36,7 +36,7 @@
             <div class="text">
                 Come back tomorrow to face another riddle.
             </div>
-            <button class="share-button" (click)="onClick()">
+            <button class="share-button" [cdkCopyToClipboard]="result.share(true)" (click)="onClick()">
                 Share
             </button>
             <div class="footer">Authors: Rafał Bryk, Piotr Pawłowski</div>

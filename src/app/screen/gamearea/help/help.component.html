@@ -1,12 +1,25 @@
 <div class="rules-box">
     <h2>Game Rules</h2>
     <p>Guess the improvisers mixer team in 6 guesses.</p>
-    <p>Right spot? Green.
-        Correct person in the wrong position? Yellow.
-        Choice not included in the solution? Grey.</p>
+    <p class="tile-example-comment">Right spot? Green.</p>
+    <div class="tile-example">
+        <app-row [guess]="matchExample"></app-row>
+    </div>
+    <p class="tile-example-comment">Correct person in the wrong position? Yellow.</p>
+    <div class="tile-example">
+        <app-row [guess]="partialExample"></app-row>
+    </div>
+    <p class="tile-example-comment">Choice not included in the solution? Grey.</p>
+    <div class="tile-example">
+        <app-row [guess]="missExample"></app-row>
+    </div>
 
     <p>Looks tricky?
         Mixer teams are combined with respect to a set of secret rules.
         Figure them out on your own, you'll have it easier with your next guesses!</p>
+
+    <div class="play-container">
+            <button class="play-button" (click)="onPlayClick()">PLAY</button>
+    </div>
 </div>
 

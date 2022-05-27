@@ -7,13 +7,15 @@ import {MatchType} from "../shared/match-type";
 })
 export class ResultService {
 
+    private readonly link: string = 'https://improvle.pl';
+
     constructor(
         public game: GameService,
 
     ) {
     }
 
-    public share(): string {
+    public share(addLink: boolean): string {
         const board = this.getBoardAsAscii();
         let result: string = '';
         if (this.game.youWin()) {
@@ -26,6 +28,7 @@ export class ResultService {
         result += "\n"
         result += board;
         result += 'Play on';
+        result += (addLink) ? ' ' + this.link : '';
         return result;
     }
 

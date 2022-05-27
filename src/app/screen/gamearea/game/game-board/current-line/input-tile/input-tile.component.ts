@@ -16,7 +16,11 @@ export class InputTileComponent implements OnInit {
   @Input() artist: artistType = ArtistState.dummy();
   @Input() number: number = -1;
 
-  constructor(public game: GameService, public artistsService: ArtistService, private _snackBar: MatSnackBar) { }
+  constructor(
+      public game: GameService,
+      public artistsService: ArtistService,
+      private _snackBar: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
   }

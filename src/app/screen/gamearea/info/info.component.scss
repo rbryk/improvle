@@ -1,22 +1,35 @@
 .info-box {
   padding: 15px;
+  text-align: center;
 
   h2 {
-    font-size: 22px;
+    font-size: 34px;
+    margin-block-end: 15px;
   }
-  li {
-    font-size: 18px;
-    padding-bottom: 0px;
-  }
-}
 
-.generate-button {
-  color: white;
-  background-color: forestgreen;
-  padding: 10px 30px;
-  border-radius: 8px;
-  border: none;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 26px;
+  h3 {
+    font-size: 34px;
+    margin-block-end: 20px;
+  }
+
+  h4 {
+    font-size: 34px;
+    margin-block-end: 35px;
+  }
+
+  .link-section {
+    width: 80%;
+    padding: 6% 2%;
+    margin: 2% auto 0 auto;
+    background-color: var(--color-violet-light);
+    border: 2px solid var(--color-text);
+    color: var(--color-link);
+    text-align: center;
+  }
+
+  a {
+    font-size: 48px;
+    font-weight: 500;
+  }
+
 }

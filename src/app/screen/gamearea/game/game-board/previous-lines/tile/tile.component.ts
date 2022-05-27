@@ -4,6 +4,7 @@ import {ArtistState} from "../../../shared/artist-state";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {ArtistService} from "../../../shared/artist.service";
 import {KeyboardSelectionComponent} from "../../../keyboard-selection/keyboard-selection.component";
+import {GameService} from "../../../shared/game.service";
 
 @Component({
   selector: 'app-tile',
@@ -14,7 +15,11 @@ export class TileComponent implements OnInit {
 
   @Input() artistWithState : ArtistState = new ArtistState(ArtistState.dummy(), MatchType.None);
 
-  constructor(private _snackBar: MatSnackBar, private artistsService: ArtistService) { }
+  constructor(
+      public game: GameService,
+      private _snackBar: MatSnackBar,
+      private artistsService: ArtistService
+  ) { }
 
   ngOnInit(): void {
   }

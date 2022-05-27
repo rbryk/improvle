@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {GameService} from "./shared/game.service";
-import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
 import {KeyboardSelectionComponent} from "./keyboard-selection/keyboard-selection.component";
 import {MAT_SNACK_BAR_DATA, MatSnackBar} from '@angular/material/snack-bar';
 import {ArtistService} from "./shared/artist.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-game',
@@ -28,11 +28,18 @@ export class GameComponent implements OnInit {
     constructor(
         public game: GameService,
         private artistService: ArtistService,
+        private router: Router,
         private _snackBar: MatSnackBar
     ) {
     }
 
     ngOnInit(): void {
+        if (this.game.firstVisit) {
+            this.router.navigate(['/help']);
+        }
+        if (this.game.isOver()) {
+            this.displayEndGame();
+        }
     }
 
     onCheckClicked($event: boolean) {

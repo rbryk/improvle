@@ -5,16 +5,20 @@
             <mat-icon class="no-icon">close</mat-icon>
         </div>
     </div>
-    <mat-card class="menu-item">
-        <a routerLink="game" (click)="closeMenu()">Game</a>
-    </mat-card>
-    <mat-card class="menu-item">
-        <a routerLink="help" (click)="closeMenu()">Rules</a>
-    </mat-card>
-    <mat-card class="menu-item">
-        <a routerLink="info" (click)="closeMenu()">Info</a>
-    </mat-card>
-    <mat-card class="menu-item">
-        <a routerLink="default" (click)="closeMenu()">Default</a>
-    </mat-card>
+    <a routerLink="game" (click)="closeMenu()">
+        <mat-card class="link-section">
+            Game
+        </mat-card>
+    </a>
+    <a routerLink="help" (click)="closeMenu()">
+        <mat-card class="link-section">
+            Rules
+        </mat-card>
+    </a>
+    <a routerLink="info" (click)="closeMenu()">
+        <mat-card class="link-section">
+            Info
+        </mat-card>
+    </a>
+
 </div>
