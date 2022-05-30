@@ -14,6 +14,7 @@ import {GameService} from "../../../shared/game.service";
 export class TileComponent implements OnInit {
 
   @Input() artistWithState : ArtistState = new ArtistState(ArtistState.dummy(), MatchType.None);
+  @Input() index : number = 0;
 
   constructor(
       public game: GameService,
@@ -30,6 +31,16 @@ export class TileComponent implements OnInit {
       duration: 1500,
       verticalPosition: "top"
     });
+  }
+
+  public isPartial(): boolean {
+    return this.artistWithState.matchType === MatchType.Partial;
+  }
+
+  public matchOnTheLeft(): boolean {
+    return this.game.solution.map(function (v) {
+      return v.name
+    }).indexOf(this.artistWithState.artist.name) < this.index;
   }
 
 }

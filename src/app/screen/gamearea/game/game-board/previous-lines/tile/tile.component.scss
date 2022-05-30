@@ -2,6 +2,7 @@
   width: min(calc(((var(--vh, 1vh) * 100) - 570px) / 6), 110px);
   height: min(calc(((var(--vh, 1vh) * 100) - 570px) / 6), 110px);
   border: var(--color-text) solid 3px;
+  position: relative;
 }
 
 .image-holder-match {
@@ -33,6 +34,12 @@ img {
 }
 
 .easy-mode-helper {
-  position: relative;
+  position: absolute;
+  top:-4px;
+  left: -2px;
   color: black;
+}
+
+.arrow-icon {
+  text-shadow: 0px 0px 4px #ffffff;
 }

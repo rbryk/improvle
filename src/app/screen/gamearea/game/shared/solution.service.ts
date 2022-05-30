@@ -44,8 +44,8 @@ export class SolutionService {
 
     public generateSolutionSet(): artistType[] {
         let solutionGlobalIndex = this.getRandomPosition();
-        console.log('solutionGlobalIndex:');
-        console.log(solutionGlobalIndex);
+        // console.log('solutionGlobalIndex:');
+        // console.log(solutionGlobalIndex);
         let startIndex = this._valids.reduce((previousValue, currentValue) => {
             return currentValue < solutionGlobalIndex ? previousValue + 1 : previousValue;
         }, -1);
@@ -53,10 +53,10 @@ export class SolutionService {
         let a, b, c, d, e: number;
 
         a = startIndex;
-        console.log('startIndex:');
-        console.log(startIndex);
+        // console.log('startIndex:');
+        // console.log(startIndex);
         for (b = a + 1; b < this.artistService.count(); b++) {
-            console.log('b = ', b, ' (valids = ', valid, ')');
+            // console.log('b = ', b, ' (valids = ', valid, ')');
             for (c = b + 1; c < this.artistService.count(); c++) {
                 for (d = c + 1; d < this.artistService.count(); d++) {
                     for (e = d + 1; e < this.artistService.count(); e++) {
@@ -70,8 +70,8 @@ export class SolutionService {
                         if (this.validate(solution)) {
                             valid++;
                             if (valid === solutionGlobalIndex) {
-                                console.log('solution:');
-                                console.log(solution);
+                                // console.log('solution:');
+                                // console.log(solution);
                                 return solution;
                             }
                         }
@@ -160,8 +160,8 @@ export class SolutionService {
     }
 
     public getKeyboardForSolution(solution: artistType[]): number[] {
-        console.log("solution");
-        console.log(solution);
+        // console.log("solution");
+        // console.log(solution);
 
         let keyboardSolution: number[] = solution.map((a) => this.artistService.key(a));
 
@@ -186,10 +186,10 @@ export class SolutionService {
             }
             return prev;
         }, []);
-        console.log("keyboardSolution");
-        console.log(keyboardSolution);
-        console.log("keyboard");
-        console.log(keyboard);
+        // console.log("keyboardSolution");
+        // console.log(keyboardSolution);
+        // console.log("keyboard");
+        // console.log(keyboard);
         return this.shuffle([...keyboardSolution, ...keyboard]);
     }
 

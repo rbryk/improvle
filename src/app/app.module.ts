@@ -29,6 +29,7 @@ import {InputRowComponent} from './screen/gamearea/game/game-board/current-line/
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {EndgamePopupComponent} from './screen/gamearea/game/endgame-popup/endgame-popup.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
     declarations: [
@@ -62,7 +63,8 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
         MatIconModule,
         MatCardModule,
         MatSnackBarModule,
-        ClipboardModule
+        ClipboardModule,
+        MatTooltipModule
     ],
     providers: [],
     bootstrap: [AppComponent]

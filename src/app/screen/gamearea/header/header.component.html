@@ -18,7 +18,9 @@
                 <a href="https://www.google.com/search?q=wordle" target="_blank">WORDLE</a>
             </div>
         </div>
-        <mat-icon class="no-icon">help_outline</mat-icon>
+        <mat-icon class="no-icon" *ngIf="!game.easyModeFeatureOn()">help_outline</mat-icon>
+        <mat-icon matTooltip="Enable easy mode" class="easy-mode-off" *ngIf="game.easyModeFeatureOn() && !game.easyMode" (click)="toggleEasyMode()">swap_horiz</mat-icon>
+        <mat-icon matTooltip="Disable easy mode" class="easy-mode-on" *ngIf="game.easyModeFeatureOn() && game.easyMode" (click)="toggleEasyMode()">swap_horizontal_circle</mat-icon>
     </div>
 </div>
 

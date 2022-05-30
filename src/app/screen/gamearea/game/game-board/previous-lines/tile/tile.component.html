@@ -1,6 +1,6 @@
 <div class="tile image-holder-{{artistWithState.matchType}}" (click)="onClick()">
     <img src="/assets/artists/{{artistWithState.artist.image}}.png" alt="{{artistWithState.artist.name}}">
-    <div class="easy-mode-helper" *ngIf="game.easyMode">
-        <<
+    <div class="easy-mode-helper" *ngIf="game.easyModeFeatureOn() && game.easyMode && isPartial()">
+        <mat-icon class="arrow-icon">{{matchOnTheLeft() ? 'fast_rewind' : 'fast_forward'}}</mat-icon>
     </div>
 </div>

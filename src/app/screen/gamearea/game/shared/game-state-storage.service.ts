@@ -7,6 +7,7 @@ import {GameService} from "./game.service";
 export class GameStateStorageService {
 
   private firstVisitKey = 'firstVisit';
+  private easyModeKey = 'easyMode';
 
   constructor() {
 
@@ -18,6 +19,18 @@ export class GameStateStorageService {
 
   setFirstVisit(): void {
      localStorage.setItem(this.firstVisitKey, JSON.stringify(false));
+  }
+
+  getEasyMode(): boolean {
+    let val = localStorage.getItem(this.easyModeKey);
+    if (val !== null) {
+      return JSON.parse(val);
+    }
+    return false;
+  }
+
+  setEasyMode(mode: boolean): void {
+    localStorage.setItem(this.easyModeKey, JSON.stringify(mode));
   }
 
   save(game: GameService, saveFirstVisit: boolean) {
@@ -32,7 +45,7 @@ export class GameStateStorageService {
       guesses: game.guesses,
       matchArtists: [...game.matchArtists],
       partialArtists: [...game.partialArtists],
-      missArtists: [...game.missArtists]
+      missArtists: [...game.missArtists],
     }
     localStorage.setItem(key, JSON.stringify(value));
   }

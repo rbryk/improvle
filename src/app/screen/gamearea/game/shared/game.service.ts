@@ -11,7 +11,8 @@ import {GameStateStorageService} from "./game-state-storage.service";
 })
 export class GameService {
 
-    easyMode = false;
+    public readonly EASYMODE_FEATURE: boolean = true;
+    public easyMode: boolean = false;
 
     public readonly MAX_ARTISTS = 5;
     public readonly MAX_GUESSES = 6;
@@ -43,18 +44,28 @@ export class GameService {
     ) {
         this.startDate = new Date();
         this.firstVisit = gameStateStorage.isFirstVisit();
+        this.easyMode = gameStateStorage.getEasyMode();
         if (gameStateStorage.isGameStateSaved(this)) {
             gameStateStorage.load(this);
         } else {
             gameStateStorage.clearGames();
             this.solution = this.solutionService.getSolution();
             this.keyboard = this.solutionService.getKeyboardForSolution(this.solution);
-            gameStateStorage.save(this, false);
+            gameStateStorage.save(this, !this.firstVisit);
         }
-        console.log(this.keyboard);
-        console.log(this.solution);
+        // console.log(this.keyboard);
+        // console.log(this.solution);
         // this.currentGuess = [...this.solution];
         // this.currentInputArtist = this.MAX_ARTISTS;
+    }
+
+    easyModeFeatureOn() {
+        return this.EASYMODE_FEATURE;
+    }
+
+    public toggleEasyMode(): void {
+        this.easyMode = !this.easyMode;
+        this.gameStateStorage.setEasyMode(this.easyMode);
     }
 
     public setVisited(): void {
