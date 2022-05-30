@@ -1,21 +1,22 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-gamearea',
-  templateUrl: './gamearea.component.html',
-  styleUrls: ['./gamearea.component.scss']
+    selector: 'app-gamearea',
+    templateUrl: './gamearea.component.html',
+    styleUrls: ['./gamearea.component.scss']
 })
 export class GameareaComponent implements OnInit {
 
-  @Output() menuClicked: EventEmitter<string> =
-      new EventEmitter<string>();
+    @Output() menuClicked: EventEmitter<string> =
+        new EventEmitter<string>();
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  onMenuClicked($event: string) {
-    this.menuClicked.emit($event);
-  }
+    onMenuClicked($event: string) {
+        this.menuClicked.emit($event);
+    }
 }

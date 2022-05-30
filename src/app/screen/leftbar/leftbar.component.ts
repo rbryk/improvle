@@ -19,5 +19,4 @@ export class LeftbarComponent implements OnInit {
     closeMenu(): void {
         this.menuClosed.emit('');
     }
-
 }

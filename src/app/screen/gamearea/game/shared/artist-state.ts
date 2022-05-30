@@ -3,7 +3,10 @@ import {artistType} from "./artistType";
 
 export class ArtistState {
 
-    constructor(public artist: artistType, public matchType: MatchType) {
+    constructor(
+        public artist: artistType,
+        public matchType: MatchType
+    ) {
     }
 
     public static dummy(): artistType {

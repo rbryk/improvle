@@ -341,7 +341,9 @@ export class ArtistService {
     public key(artist: artistType): number {
         // let art = JSON.parse(JSON.stringify(this.artists));
         // let elem = JSON.parse(JSON.stringify(artist));
-        return this.artists.map(function(e:artistType) { return e.name; }).indexOf(artist.name);
+        return this.artists.map(function (e: artistType) {
+            return e.name;
+        }).indexOf(artist.name);
     }
 
     public count(): number {

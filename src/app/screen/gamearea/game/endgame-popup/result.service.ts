@@ -11,7 +11,6 @@ export class ResultService {
 
     constructor(
         public game: GameService,
-
     ) {
     }
 

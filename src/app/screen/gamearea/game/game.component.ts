@@ -8,17 +8,6 @@ import {Router} from "@angular/router";
 @Component({
     selector: 'app-game',
     templateUrl: './game.component.html',
-    // animations: [
-    //     trigger('flyInOut', [
-    //         transition(':enter', [
-    //             //style({ opacity: 0, transform: 'translateY(0px)' }),
-    //             animate('2000ms', style({ opacity: 1, transform: 'translateY(0)' })),
-    //         ]),
-    //         transition(':leave', [
-    //             //style({ opacity: 1, transform: 'translateY(0px)' }),
-    //             animate('5000ms', style({ opacity: 0, transform: 'translateY(-100%)' })),
-    //         ]),
-    //     ])],
     styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {

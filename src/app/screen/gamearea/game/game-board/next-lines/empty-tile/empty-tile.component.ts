@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-empty-tile',
-  templateUrl: './empty-tile.component.html',
-  styleUrls: ['./empty-tile.component.scss', '../../previous-lines/tile/tile.component.scss']
+    selector: 'app-empty-tile',
+    templateUrl: './empty-tile.component.html',
+    styleUrls: ['./empty-tile.component.scss', '../../previous-lines/tile/tile.component.scss']
 })
 export class EmptyTileComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {
+    }
 }
